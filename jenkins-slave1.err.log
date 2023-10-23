@@ -1,0 +1,66 @@
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:853)
+	at java.base/java.nio.channels.SocketChannel.open(SocketChannel.java:285)
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpoint.open(JnlpAgentEndpoint.java:206)
+	... 3 more
+
+Sep 10, 2023 5:31:24 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to localhost:7982 (retrying:11)
+java.io.IOException: Failed to connect to localhost:7982
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpoint.open(JnlpAgentEndpoint.java:248)
+	at hudson.remoting.Engine.connectTcp(Engine.java:840)
+	at hudson.remoting.Engine.innerRun(Engine.java:718)
+	at hudson.remoting.Engine.run(Engine.java:514)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:586)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:853)
+	at java.base/java.nio.channels.SocketChannel.open(SocketChannel.java:285)
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpoint.open(JnlpAgentEndpoint.java:206)
+	... 3 more
+
+Sep 10, 2023 5:31:24 PM hudson.remoting.jnlp.Main$CuiListener error
+SEVERE: Failed to connect to localhost:7982
+java.io.IOException: Failed to connect to localhost:7982
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpoint.open(JnlpAgentEndpoint.java:248)
+	at hudson.remoting.Engine.connectTcp(Engine.java:840)
+	at hudson.remoting.Engine.innerRun(Engine.java:718)
+	at hudson.remoting.Engine.run(Engine.java:514)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:586)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:853)
+	at java.base/java.nio.channels.SocketChannel.open(SocketChannel.java:285)
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpoint.open(JnlpAgentEndpoint.java:206)
+	... 3 more
+
+WARNING: A terminally deprecated method in java.lang.System has been called
+WARNING: System::setSecurityManager has been called by hudson.remoting.jnlp.Main (file:/C:/builds/slave.jar)
+WARNING: Please consider reporting this to the maintainers of hudson.remoting.jnlp.Main
+WARNING: System::setSecurityManager will be removed in a future release
+Sep 10, 2023 5:31:25 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: windows-build-agent-0030
+Sep 10, 2023 5:31:25 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Sep 10, 2023 5:31:25 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.7
+Sep 10, 2023 5:31:25 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using c:\builds\remoting as a remoting work directory
+Sep 10, 2023 5:31:25 PM org.jenkinsci.remoting.engine.WorkDirManager setupLogging
+INFO: Both error and output logs will be printed to c:\builds\remoting
+Sep 10, 2023 5:31:25 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [https://jenkins-hcc-rpa-sip-svcs-ctc-prd.optum.com/]
+Sep 10, 2023 5:31:25 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+Sep 10, 2023 5:31:25 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting TCP connection tunneling is enabled. Skipping the TCP Agent Listener Port availability check
+Sep 10, 2023 5:31:25 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Agent discovery successful
+  Agent address: localhost
+  Agent port:    7982
+  Identity:      55:e2:88:c7:1d:1c:4d:64:8a:fa:70:ef:55:43:e0:d7
+Sep 10, 2023 5:31:25 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Handshaking
+Sep 10, 2023 5:31:25 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to localhost:7982
