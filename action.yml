@@ -1,4 +1,4 @@
-name: 'Palm Log analysis'
+name: 'AI Log analysis'
 description: 'Provide summary and possible fixes for generated log files'
 
 inputs:
