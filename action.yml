@@ -1,4 +1,4 @@
-name: 'Log analysis'
+name: 'Log Analysis'
 description: 'Provide summary and possible fixes for generated log files'
 
 inputs:
