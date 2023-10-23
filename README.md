@@ -1,4 +1,4 @@
-# Palm Log Analysis Action
+# Analysis Action
 Fast Track log analysis and debugging using this action.
 This github action can be used to summarize any log files generated in your automated CI/CD environment. The summary will also include possible solutions for any errors or warnings that might have been encountered by PaLM while going thorugh the log files.
 ## Usage
