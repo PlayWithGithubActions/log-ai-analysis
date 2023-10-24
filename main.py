@@ -2,17 +2,10 @@ import argparse
 import google.generativeai as palm
 
 
-def get_fix(path, apikey):
+def get_fix(path, apikey, promptkey):
 
     # required prompt
-    prompt = '''
-    You are an expert at analyzing logs.
-    You have to summarize the content log content given to you and
-    suggest ways to fix errors if possible. Ignore any warnings
-    that you see. If the file is not a typical log file or if the file is
-    a program file in any programming language then inform the user
-    that the file provided was not a log file.
-    '''
+    prompt = promptkey
     palm.configure(api_key=apikey)
 
     models = [m for m in palm.list_models() if 'generateText' in m.supported_generation_methods]
@@ -32,8 +25,10 @@ def get_fix(path, apikey):
 parser = argparse.ArgumentParser(description="Get file name")
 parser.add_argument('filename')
 parser.add_argument('apikey')
+parser.add_argument('promptkey')
 # Arguments
 args = parser.parse_args()
 print(args.filename)
 print(args.apikey)
-get_fix(args.filename, args.apikey)
+print(args.promptkey)
+get_fix(args.filename, args.apikey,args.promptkey)
