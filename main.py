@@ -16,7 +16,7 @@ def get_fix(path, apikey, promptkey):
             prompt += "\nAnalyze the following content:\n" + file.read()
             file.close()
             ans = palm.generate_text(model=model, prompt=prompt,
-                 temperature=0, max_output_tokens=800)
+                 temperature=1, max_output_tokens=800)
             print(ans.candidates[0]['output'])
     except FileNotFoundError:
         print("Unable to find specified file. Use pwd for referrence.")
