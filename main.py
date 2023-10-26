@@ -28,7 +28,4 @@ parser.add_argument('apikey')
 parser.add_argument('promptkey')
 # Arguments
 args = parser.parse_args()
-print(args.filename)
-print(args.apikey)
-print(args.promptkey)
 get_fix(args.filename, args.apikey,args.promptkey)
